@@ -1,0 +1,6 @@
+#!/bin/sh
+rm -f abar
+./peeker 0x90000000 0x1000 0x0 0x1000 abar  # for FPGA
+#./peeker 0x9041c000 0x1000 0x0 0x1000 abar  # for AMD platform
+#./peeker 0xfbffc000 0x1000 0x0 0x1000 abar  # for Intel platform
+hexdump -C abar
