@@ -1,0 +1,43 @@
+set smtp_url=""
+set use_from=yes
+set realname="Huang Rui"
+set from="email loc"
+
+set spoolfile="imap://"
+set folder="imap://"
+set mail_check=30
+set imap_user=
+set imap_pass=""
+set edit_headers=yes
+
+# how to query the exchange ldap database
+set query_command = "mutt-ldap-query.sh %s"
+# bind editor "\t" complete-query
+# tab completion uses address book over ldap instead of aliases
+
+
+# make sure the following two directories exist
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+
+set editor="vim -c 'set tw=70 et' '+/^$' "
+set sort=threads
+
+# save sent mail and drafts
+set record="=Sent Items"
+set postponed="=Drafts"
+
+# abook
+#set query_command = "abook --mutt-query '%s'"
+#macro generic,index,pager \ca "<shell-escape>abook<return>" "launch abook"
+#macro index,pager A "<pipe-message>abook --add-email<return>" "add the sender address to abook"
+
+#======================================================#
+# Colours: defaults are a little bleak so experiment!
+
+source ~/mutt/mutt_colors            # In their own file
+#source ~/mutt/mutt-colors-solarized-dark-16.muttrc
+#source ~/mutt/mutt-colors-solarized-dark-256.muttrc 
+#source ~/mutt/mutt-colors-solarized-light-16.muttrc  
+#source ~/mutt/mutt-colors-solarized-light-256.muttrc  
+#source ~/mutt/mutt-colors-solarized-template.muttrc
