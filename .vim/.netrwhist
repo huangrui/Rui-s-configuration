@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/ray/linux/drivers/usb/host'
+let g:netrw_dirhist_2='/home/ray/.vim/plugin'
+let g:netrw_dirhist_3='/home/ray/.mutt'
+let g:netrw_dirhist_4='/home/ray/backport/rhel-6.3'
+let g:netrw_dirhist_5='/home/ray/.mutt'
+let g:netrw_dirhist_6='/home/ray/SLED11SP2/kernel'
+let g:netrw_dirhist_7='/home/ray/linux/drivers/tty/serial'
