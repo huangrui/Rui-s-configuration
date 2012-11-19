@@ -1,0 +1,26 @@
+[user]
+	name = Huang Rui
+	email = hr8695@gmail.com
+[color]
+	ui = auto
+[alias]
+	br = branch
+	ci = commit -a
+	cs = commit -s
+	cis = commit -a -s
+	co = checkout
+	rh = reset --hard
+	st = status
+	fp = format-patch
+	po = pull origin
+	pu = pull upstream
+	fo = fetch -p origin
+	fu = fetch -p upstream
+	fuh = fetch -p uphub
+	fh = fetch -p github
+	fs = fetch -p gitorious
+	fa = fetch --all -p
+	mg = merge
+[sendemail]
+	smtpserver = 
+	smtpserverport = 25
