@@ -1,0 +1,15 @@
+[options]
+verbose = 1
+read_all = false
+message_log = ~/.getmail/log
+
+[retriever]
+type = SimplePOP3Retriever
+server = 202.38.64.8
+username = huangrui@mail.ustc.edu.cn
+password = #imput password#
+
+[destination]
+type = MDA_external
+path = /usr/bin/procmail
+unixfrom = true
