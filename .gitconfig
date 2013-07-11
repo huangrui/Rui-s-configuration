@@ -1,6 +1,6 @@
 [user]
 	name = Huang Rui
-	email = hr8695@gmail.com
+	email = huangrui@mail.ustc.edu.cn
 [color]
 	ui = auto
 [alias]
@@ -21,6 +21,7 @@
 	fs = fetch -p gitorious
 	fa = fetch --all -p
 	mg = merge
+	sh = show --format=email
 [sendemail]
 	smtpserver = 
 	smtpserverport = 25
