@@ -4,6 +4,7 @@
 [color]
 	ui = auto
 [alias]
+	ar = apply --reject
 	br = branch
 	ci = commit -a
 	cs = commit -s
@@ -21,6 +22,7 @@
 	fs = fetch -p gitorious
 	fa = fetch --all -p
 	mg = merge
+	sh = show --format=email
 [sendemail]
 	smtpserver = mail.ustc.edu.cn
     	smtpuser = huangrui@mail.ustc.edu.cn
