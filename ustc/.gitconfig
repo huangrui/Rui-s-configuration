@@ -22,6 +22,6 @@
 	fa = fetch --all -p
 	mg = merge
 [sendemail]
-    	smtpserver = 202.38.64.8
+	smtpserver = mail.ustc.edu.cn
     	smtpuser = huangrui@mail.ustc.edu.cn
     	smtpserverport = 25

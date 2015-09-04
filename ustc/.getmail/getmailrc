@@ -5,7 +5,7 @@ message_log = ~/.getmail/log
 
 [retriever]
 type = SimplePOP3Retriever
-server = 202.38.64.8
+server = mail.ustc.edu.cn
 username = huangrui@mail.ustc.edu.cn
 password = #imput password#
 
