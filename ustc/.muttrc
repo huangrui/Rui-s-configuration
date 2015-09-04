@@ -1,8 +1,8 @@
 # Huang Rui
 
-set realname = "Huang Rui"
-set from = "huangrui@mail.ustc.edu.cn"
-set use_from = yes
+#set realname = "Huang Rui"
+#set from = "huangrui@mail.ustc.edu.cn"
+#set use_from = yes
 #编辑器 直接在 Mutt 的终端里使用非图形界面的 vim
 set editor="vim -c 'set tw=70 et' '+/^$' "
 
@@ -10,19 +10,27 @@ set editor="vim -c 'set tw=70 et' '+/^$' "
 set sendmail="/usr/bin/msmtp"
 
 #建立信箱
-set folder="~/Mail"
-set mbox="~/Mail/inbox"
-#set mbox_type=maildir
-set spoolfile="~/Mail/inbox"
-set postponed="~/Mail/postponed"
-set record="~/Mail/sent"
+#set folder="~/Mail"
+#set mbox="~/Mail/inbox"
+set mbox_type=maildir
+#set spoolfile="~/Mail/inbox"
+#set postponed="~/Mail/postponed"
+#set record="~/Mail/sent"
 
 # 让mutt监视下面几个邮箱，并随时报告新邮件
-mailboxes "=inbox"
+mailboxes "~/Mail/ustc"
+mailboxes "~/Mail/hotmail"
 #mailboxes "=USTCstudent"
 #mailboxes "=USTCteacher"
 #mailboxes "=ustcbbs
 #mailboxes "=Gmail"
+
+folder-hook ~/Mail/ustc 'set folder="~/Mail/ustc"; my_hdr From: Huang Rui <huangrui@mail.ustc.edu.cn>;my_hdr Reply-To: Huang Rui <huangrui@mail.ustc.edu.cn>;set mbox="+inbox";set spoolfile="+inbox";set record="+sent";set postponed="+draft"; alternates "huangrui@mail.ustc.edu.cn"'
+
+#folder-hook ~/Mail/hotmail 'set folder="~/Mail/hotmail"; my_hdr From: Rui Huang <linux.hr@hotmail.com>;my_hdr Reply-To: Rui Huang <linux.hr@hotmail.com>;set mbox="+inbox";set spoolfile="+inbox";set record="+sent";set postponed="+draft"; alternates "linux.hr@hotmail.com"'
+
+folder-hook ~/Mail/hotmail 'set folder="~/Mail/hotmail"; my_hdr From: Huang Rui <huangrui@mail.ustc.edu.cn>;my_hdr Reply-To: Huang Rui <huangrui@mail.ustc.edu.cn>;set mbox="+inbox";set spoolfile="+inbox";set record="+sent";set postponed="+draft"; alternates "huangrui@mail.ustc.edu.cn"'
+
 
 set check_new = yes
 set timeout = 600
@@ -32,7 +40,7 @@ set timeout = 600
 
 #set index_format="%4C %Z %{%b %d} %-15.15L (%4l) %s"
 #指定你有那些信箱文件。当你按 "c" 切换信箱时，再按 Tab 键，这些信箱就可供你选择
-mailboxes Mailbox sent-mail 
+#mailboxes Mailbox sent-mail
 #这是一个 bool 型变量。它表明你在回信时引用原文是否加入原文的邮件头。
 set header=no 
 #可以设置为 yes, no, ask-yes, 或者 ask-no. 这是说，当你按q退出时，是否提示你(ask-yes,ask-no)，
@@ -45,7 +53,7 @@ set quit=ask-yes
 #这也是一个提示性变量。它是确定当你退出时，是否提示你把信件从 spool 移动到的 mbox 文件。
 set move=no
 #当 Mutt 用 thread 方式显示时，是否用纯 ascii 表示树状列表。
-set ascii_chars=yes
+set ascii_chars=no
 #回信时是否包含原文。
 set include
 #回信的引文之前插入那个符号？
@@ -61,7 +69,7 @@ score "~D" -5
 score "~O" +1
 score "~s believe" -10
 #排序方式。
-set sort=score
+set sort=threads # the original value is score
 #当用 thread 排序方式时，我们对各个 thread 的相对排序顺序。
 set sort_aux=date
 #如果翻到最后，再按往下翻也不会翻到下一封信件
@@ -116,5 +124,5 @@ source ~/mutt/mutt_colors            # In their own file
 #把mutt发送的from域作为sendmail发送邮件的sender(否则会用user@localdomian)
 set envelope_from=yes
 
-macro index G "!getmail\n" "Invoke getmail"
-macro pager G "!getmail\n" "Invoke getmail"
+macro index G "!~/.getmail/getmail.sh\n" "Invoke getmail"
+macro pager G "!~/.getmail/getmail.sh\n" "Invoke getmail"

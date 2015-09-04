@@ -1,8 +1,8 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 SHELL=/bin/bash
-MAILDIR=$HOME/Mail
-DEFAULT=$MAILDIR/inbox
-LOGFILE=$MAILDIR/.procmaillog
+#MAILDIR=$HOME/Mail
+#DEFAULT=$MAILDIR/inbox
+#LOGFILE=$MAILDIR/.procmaillog
 
 #:0 
 #* ^From.*@mail.ustc.edu.cn 

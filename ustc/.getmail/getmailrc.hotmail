@@ -1,0 +1,14 @@
+[options]
+verbose = 1
+read_all = false
+message_log = ~/.getmail/log
+
+[retriever]
+type = SimplePOP3SSLRetriever
+server = pop-mail.outlook.com
+username = linux.hr@hotmail.com
+password = #input password#
+
+[destination]
+type = Maildir
+path = ~/Mail/hotmail/inbox/

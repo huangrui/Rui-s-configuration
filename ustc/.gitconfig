@@ -1,6 +1,8 @@
 [user]
 	name = Huang Rui
 	email = huangrui@mail.ustc.edu.cn
+[core]
+	editor = vim
 [color]
 	ui = auto
 [alias]

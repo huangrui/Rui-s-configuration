@@ -10,6 +10,5 @@ username = huangrui@mail.ustc.edu.cn
 password = #imput password#
 
 [destination]
-type = MDA_external
-path = /usr/bin/procmail
-unixfrom = true
+type = Maildir
+path = ~/Mail/ustc/inbox/
