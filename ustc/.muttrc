@@ -49,6 +49,8 @@ set quit=ask-yes
 #html类型的附件是允许直接通过 .mailcap 浏览的？
 #doc类型的附件通过wvware转成html 浏览
 #auto_view text/html application/msword
+auto_view text/html
+alternative_order text/plain text/enriched text/html
 
 #这也是一个提示性变量。它是确定当你退出时，是否提示你把信件从 spool 移动到的 mbox 文件。
 set move=no
