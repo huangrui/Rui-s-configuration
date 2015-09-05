@@ -29,7 +29,7 @@ folder-hook ~/Mail/ustc 'set folder="~/Mail/ustc"; my_hdr From: Huang Rui <huang
 
 #folder-hook ~/Mail/hotmail 'set folder="~/Mail/hotmail"; my_hdr From: Rui Huang <linux.hr@hotmail.com>;my_hdr Reply-To: Rui Huang <linux.hr@hotmail.com>;set mbox="+inbox";set spoolfile="+inbox";set record="+sent";set postponed="+draft"; alternates "linux.hr@hotmail.com"'
 
-folder-hook ~/Mail/hotmail 'set folder="~/Mail/hotmail"; my_hdr From: Huang Rui <huangrui@mail.ustc.edu.cn>;my_hdr Reply-To: Huang Rui <huangrui@mail.ustc.edu.cn>;set mbox="+inbox";set spoolfile="+inbox";set record="+sent";set postponed="+draft"; alternates "huangrui@mail.ustc.edu.cn"'
+folder-hook ~/Mail/hotmail 'set folder="~/Mail/hotmail";my_hdr From: Huang Rui <huangrui@mail.ustc.edu.cn>;my_hdr Bcc: Huang Rui <huangrui@mail.ustc.edu.cn>;my_hdr Reply-To: Huang Rui <huangrui@mail.ustc.edu.cn>;set mbox="+inbox";set spoolfile="+inbox";set record="+sent";set postponed="+draft"; alternates "huangrui@mail.ustc.edu.cn"'
 
 
 set check_new = yes
